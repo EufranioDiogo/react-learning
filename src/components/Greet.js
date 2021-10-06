@@ -1,4 +1,4 @@
-const Greet = ({ name, heroName, children }) => {
+const  Greet = ({ name, heroName, children }) => {
   return (
     <>
       <h1>
