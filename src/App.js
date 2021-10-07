@@ -6,6 +6,8 @@ import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
+
 
 
 import './App.css';
@@ -14,10 +16,12 @@ function App() {
   return (
     <div className="App">
     
-    <FunctionClick></FunctionClick>
-    <ClassClick></ClassClick>
+    
+    <EventBind/>
 
     {/*
+    <FunctionClick></FunctionClick>
+    <ClassClick></ClassClick>
       <Greet name="Bruce Valente" heroName="Superman"></Greet>
     <Welcome name="Zara Diogo" heroName="Ladybug"/>
     <Counter></Counter>
