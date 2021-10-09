@@ -9,6 +9,7 @@ import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
 
 import './App.css';
 
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
     
     
-
+    <NameList></NameList>
     {/*
     <ParentComponent parentName="Parent 1"></ParentComponent>
     <EventBind/>
