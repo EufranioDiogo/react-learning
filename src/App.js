@@ -16,17 +16,21 @@ import './components/appStyles.css';
 import styles from './components/appStyles.module.css';
 import Form from './components/Form';
 import LifecycleA from './components/LifecycleA'
-
+import ParentCompo from './components/ParentCompo';
+import RefsDemo from './components/RefsDemo';
+import FocusInput from './components/FocusInput';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    
-    
-    
+
+      <FocusInput></FocusInput>
+
+      {/*
+      <RefsDemo></RefsDemo>
+    <ParentCompo></ParentCompo>
     <LifecycleA></LifecycleA>
-    {/*
     <Form></Form>
     <h1 className="error">Error</h1>
     <h1 className={styles.success}>Success</h1>
