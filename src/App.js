@@ -23,11 +23,16 @@ import FRParenteInput from './components/FRParenteInput';
 import PortalDemo from './components/PortalDemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import OverCounter from './components/OverCounter';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+    <ClickCounter age={12}></ClickCounter>
+    <OverCounter></OverCounter>
+      {/*
       <ErrorBoundary>
         <Hero heroName={'Eufránio'}></Hero>
       </ErrorBoundary>
@@ -40,8 +45,6 @@ function App() {
         <Hero heroName={'Creuma'}></Hero>
 
       </ErrorBoundary>
-
-      {/*
     <PortalDemo></PortalDemo>
     <FRParenteInput></FRParenteInput>
     <FocusInput></FocusInput>
