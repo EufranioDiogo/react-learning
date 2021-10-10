@@ -19,16 +19,18 @@ import LifecycleA from './components/LifecycleA'
 import ParentCompo from './components/ParentCompo';
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput';
+import FRParenteInput from './components/FRParenteInput';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
 
-      <FocusInput></FocusInput>
+      <FRParenteInput></FRParenteInput>
 
       {/*
-      <RefsDemo></RefsDemo>
+    <FocusInput></FocusInput>
+    <RefsDemo></RefsDemo>
     <ParentCompo></ParentCompo>
     <LifecycleA></LifecycleA>
     <Form></Form>
