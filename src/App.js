@@ -25,14 +25,21 @@ import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
 import OverCounter from './components/OverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import OverCounterTwo from './components/OverCounterTwo'
+import User from './components/User';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <ClickCounter age={12}></ClickCounter>
-    <OverCounter></OverCounter>
+    
+    <ClickCounterTwo></ClickCounterTwo>
+    <OverCounterTwo></OverCounterTwo>
+    <User render={(isLoggedIn) => isLoggedIn ? 'Eufránio' : 'Guest'}></User>
       {/*
+      <ClickCounter age={12}></ClickCounter>
+    <OverCounter></OverCounter>
       <ErrorBoundary>
         <Hero heroName={'Eufránio'}></Hero>
       </ErrorBoundary>
