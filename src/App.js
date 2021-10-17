@@ -1,5 +1,5 @@
 import './App.css';
-import Counter from './Learning Hooks/Lesson 2/Counter'
+import Counter from './Learning Hooks/Lesson 3/Counter'
 
 function App() {
   return (
