@@ -28,16 +28,19 @@ import OverCounter from './components/OverCounter';
 import ClickCounterTwo from './components/ClickCounterTwo';
 import OverCounterTwo from './components/OverCounterTwo'
 import User from './components/User';
+import FRParentInput from './components/RefsForwarding/FRParentInput';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
     
-    <ClickCounterTwo></ClickCounterTwo>
+    <FRParentInput></FRParentInput>
+      {/*
+      <ClickCounterTwo></ClickCounterTwo>
     <OverCounterTwo></OverCounterTwo>
     <User render={(isLoggedIn) => isLoggedIn ? 'Eufránio' : 'Guest'}></User>
-      {/*
       <ClickCounter age={12}></ClickCounter>
     <OverCounter></OverCounter>
       <ErrorBoundary>
