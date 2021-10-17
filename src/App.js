@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './Learning Hooks/Lesson 3/Counter'
+import CounterThree from './Learning Hooks/Lesson 4/CounterThree'
 
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
+      <CounterThree></CounterThree>
     </div>
   );
 }
