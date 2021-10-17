@@ -1,10 +1,10 @@
 import './App.css';
-import Heading from './components/Higher Orders Components/Heading';
+import ComponentC from './components/Context React/ComponentC';
 
 function App() {
   return (
     <div className="App">
-      <Heading></Heading>
+      <ComponentC></ComponentC>
     </div>
   );
 }
