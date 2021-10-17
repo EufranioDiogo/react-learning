@@ -1,10 +1,10 @@
 import './App.css';
-import ComponentC from './components/Context React/ComponentC';
+import Counter from './Learning Hooks/Lesson 2/Counter'
 
 function App() {
   return (
     <div className="App">
-      <ComponentC></ComponentC>
+      <Counter></Counter>
     </div>
   );
 }
