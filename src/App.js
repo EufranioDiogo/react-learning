@@ -20,7 +20,7 @@ import ParentCompo from './components/ParentCompo';
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput';
 import FRParenteInput from './components/FRParenteInput';
-import PortalDemo from './components/PortalDemo';
+import PortalDemo from './components/React Portals/PortalDemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
@@ -29,6 +29,8 @@ import ClickCounterTwo from './components/ClickCounterTwo';
 import OverCounterTwo from './components/OverCounterTwo'
 import User from './components/User';
 import FRParentInput from './components/RefsForwarding/FRParentInput';
+import MainElement from './components/React Portals/MainElement';
+
 
 import './App.css';
 
@@ -36,7 +38,9 @@ function App() {
   return (
     <div className="App">
     
+    <MainElement></MainElement>
     <FRParentInput></FRParentInput>
+    
       {/*
       <ClickCounterTwo></ClickCounterTwo>
     <OverCounterTwo></OverCounterTwo>

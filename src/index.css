@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.notification-popup {
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 1rem 1.5rem #00000048;
+  text-align: center;
+  border: 0.1rem solid #00000067;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+}
+
+.popup {
+  opacity: 1;
+}
+.remove-popup {
+  opacity: 0;
+}
+
