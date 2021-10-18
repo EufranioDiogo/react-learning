@@ -1,10 +1,10 @@
 import './App.css';
-import HiderButton from './Learning Hooks/Lesson 10/HiderButton'
+import IntervalCounter from './Learning Hooks/Lesson 11/IntervalCounter'
 
 function App() {
   return (
     <div className="App">
-      <HiderButton></HiderButton>
+      <IntervalCounter></IntervalCounter>
     </div>
   );
 }
