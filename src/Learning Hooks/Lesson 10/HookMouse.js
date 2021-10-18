@@ -4,9 +4,6 @@ import Ball from './Ball';
 
 function HookMouse() {
   const [coordinate, setCoordinate] = useState({ x: 0, y: 0 });
-  const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
-  const [generateBallFlag, setGenerateBallFlag] = useState(true);
-  const [balls, setBalls] = useState([]);
 
   const logMousePosition = (e) => {
     setCoordinate((prevCoordinate) => {

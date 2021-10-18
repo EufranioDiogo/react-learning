@@ -1,10 +1,10 @@
 import './App.css';
-import HookMouse from './Learning Hooks/Lesson 9/HookMouse'
+import HiderButton from './Learning Hooks/Lesson 10/HiderButton'
 
 function App() {
   return (
     <div className="App">
-      <HookMouse></HookMouse>
+      <HiderButton></HiderButton>
     </div>
   );
 }
