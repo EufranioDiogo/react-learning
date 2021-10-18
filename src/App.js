@@ -1,5 +1,5 @@
 import './App.css';
-import CounterFour from './Learning Hooks/Lesson 5/CounterFour'
+import CounterFour from './Learning Hooks/Lesson 7/TitleModifier'
 
 function App() {
   return (
