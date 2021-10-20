@@ -1,10 +1,16 @@
 import './App.css';
-import DataFetching from './Learning Hooks/Lesson 12/DataFetching'
+import React from 'react';
+import ComponentC from './Learning Hooks/Lesson 16/ComponentC';
+
+export const UserContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <DataFetching></DataFetching>
+      <UserContext.Provider value={{ id: 1, name: 'Eufranio Diogo' }}>
+        <ComponentC></ComponentC>
+      </UserContext.Provider>
+
     </div>
   );
 }
