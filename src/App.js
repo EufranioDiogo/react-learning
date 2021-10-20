@@ -1,9 +1,10 @@
 import './App.css';
-import IntervalCounter from './Learning Hooks/Lesson 11/IntervalCounter'
+import DataFetching from './Learning Hooks/Lesson 12/DataFetching'
 
 function App() {
   return (
     <div className="App">
+      <DataFetching></DataFetching>
     </div>
   );
 }
