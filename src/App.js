@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useReducer } from 'react';
-import DataFetching from './Learning Hooks/Lesson 24/DataFetching';
+import ParentComponent from './Learning Hooks/Lesson 26/ParentComponent';
 
 
 export const UserContext = React.createContext();
@@ -54,11 +54,8 @@ const reducer = (currentState, action) => {
 function App() {
   return (
     <div className="App">
-      <DataFetching>
 
-      </DataFetching>
-
-
+      <ParentComponent></ParentComponent>
     </div>
   );
 }
