@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useReducer } from 'react';
-import Counter from './Learning Hooks/Lesson 22/Counter';
+import DataFetching from './Learning Hooks/Lesson 24/DataFetching';
 
 
 export const UserContext = React.createContext();
@@ -54,10 +54,9 @@ const reducer = (currentState, action) => {
 function App() {
   return (
     <div className="App">
-      <CounterContext.Provider value={{ initialState, reducer }}>
-        <Counter></Counter>
-        <Counter></Counter>
-      </CounterContext.Provider>
+      <DataFetching>
+
+      </DataFetching>
 
 
     </div>
