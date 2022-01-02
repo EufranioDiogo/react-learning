@@ -1,81 +1,86 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function DataFetching() {
   const [posts, setPosts] = useState([]);
-  const [postId, setPostId] = useState(0)
+  const [postId, setPostId] = useState(0);
+  const [requestState, setRequestState] = useState("initial");
 
-  const searchAllPosts = () => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+  const searchPosts = () => {
+    setRequestState("requesting");
+
+    axios
+      .get(
+        `https://jsonplaceholder.typicode.com/posts/${
+          postId === 0 ? "" : postId
+        }`
+      )
       .then((data) => {
-        setPosts(data.data)
+        setRequestState("done");
+
+        setPosts([].concat(data.data));
       })
       .catch((err) => {
-        console.log(err)
-      })
-  }
+        setRequestState("error");
 
-  const searchIndividualPost = () => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/' + postId)
-      .then((data) => {
-        setPosts([data.data])
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
+        console.log(err.message);
+      });
+  };
 
   useEffect(() => {
-    if (postId === 0) {
-      searchAllPosts()
-    } else {
-      searchIndividualPost()
-    }
-  }, [])
+    searchPosts();
+  }, [postId]);
 
   return (
     <div>
       <div className="search-box">
-        <input type="text" name="" id="" value={postId === 0 ? '' : postId} onChange={(e) => {
-          if (e.target.value.length !== 0) {
+        <input
+          type="text"
+          name=""
+          id=""
+          value={postId === 0 ? "" : postId}
+          onChange={(e) => {
+            setRequestState("initial");
+            if (e.target.value.length !== 0) {
+              try {
+                const possiblePostIdToSearch = Number(e.target.value);
 
-            try {
-              const possiblePostIdToSearch = Number(e.target.value);
-
-              setPostId(possiblePostIdToSearch)
-            } catch (error) {
-
+                setPostId((prevState) => possiblePostIdToSearch);
+              } catch (error) {
+                console.log(error.message);
+                setRequestState("error");
+              }
+            } else {
+              setPostId((prevState) => 0);
             }
-          } else {
-            setPostId(0)
-            searchAllPosts()
-          }
-        }} />
+          }}
+        />
 
-        <button className="search-button" onClick={() => {
-          if (postId === 0) {
-            searchAllPosts()
-          } else {
-            searchIndividualPost()
-          }
-        }}>
+        <button
+          className="search-button"
+          onClick={() => {
+            searchPosts();
+          }}
+        >
           Search
         </button>
       </div>
       <h1>Posts</h1>
-      <ul className="post-list" style={{ listStyle: 'none' }}>
-        {
-          posts.map((post) => {
-            return (
-              <li>
-                <h2 className="post-title">{post.title}</h2>
-              </li>
-            )
-          })
-        }
+      <ul className="post-list" style={{ listStyle: "none" }}>
+        {requestState === "initial" ||
+          (requestState === "done" &&
+            posts.map((post) => {
+              return (
+                <li>
+                  <h2 className="post-title">{post.title}</h2>
+                </li>
+              );
+            }))}
+        {requestState === "requesting" && <h2>Searching...</h2>}
+        {requestState === "error" && <h2>An error occurred</h2>}
       </ul>
     </div>
-  )
+  );
 }
 
-export default DataFetching
+export default DataFetching;

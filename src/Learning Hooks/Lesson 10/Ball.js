@@ -1,14 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function Ball({x, y}) {
+function Ball({ x, y }) {
   return (
-    <div className="ball" style={{
-      top: y,
-      left: x
-    }}>
-
-    </div>
-  )
+    <div
+      className="ball"
+      style={{
+        top: y,
+        left: x,
+      }}
+    ></div>
+  );
 }
 
-export default Ball
+export default Ball;

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-function  IntervalCounter() {
+function IntervalCounter() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
       setCount(count + 1);
     }, 1000);
-  }, [count])
+  }, [count]);
   return (
     <div>
-      <h1>{count}</h1>
+      <h1>{count} s</h1>
     </div>
-  )
+  );
 }
 
-export default IntervalCounter
+export default IntervalCounter;
