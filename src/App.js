@@ -4,7 +4,7 @@ import Posts from "./Learning Redux/Posts";
 import TitleModifier from "./Learning Hooks/Lesson 7/TitleModifier";
 import HookMouse from "./Learning Hooks/Lesson 9/HookMouse";
 import HiderButton from "./Learning Hooks/Lesson 10/HiderButton";
-import DataFetching from "./Learning Hooks/Lesson 27/Counter";
+import DataFetching from "./Learning Hooks/Lesson 29/ClassTimer";
 
 const initialState = {
   counter1: 0,
