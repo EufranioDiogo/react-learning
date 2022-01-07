@@ -4,7 +4,7 @@ import Posts from "./Learning Redux/Posts";
 import TitleModifier from "./Learning Hooks/Lesson 7/TitleModifier";
 import HookMouse from "./Learning Hooks/Lesson 9/HookMouse";
 import HiderButton from "./Learning Hooks/Lesson 10/HiderButton";
-import DataFetching from "./Learning Hooks/Lesson 32/CounterOne";
+import DataFetching from "./Learning Hooks/Lesson 33/UserForm";
 import DataFetching1 from "./Learning Hooks/Lesson 32/CounterTwo";
 
 const initialState = {
@@ -47,7 +47,6 @@ function App() {
   return (
     <div className="App">
       <DataFetching />
-      <DataFetching1 />
     </div>
   );
 }
